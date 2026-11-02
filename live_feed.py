@@ -114,6 +114,9 @@ while True:
 
     if confirmed is None:
         print("Starting score:", HOME, score[0], "-", score[1], AWAY)
+        db.execute("INSERT INTO events VALUES (0, ?, ?, 'START', 0, ?, ?, NULL)",
+                   (round(first_seen_frame / fps, 2), last_good_clock, score[0], score[1]))
+        db.commit()
         confirmed = score
         continue
 
