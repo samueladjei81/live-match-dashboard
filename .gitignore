@@ -1,0 +1,9 @@
+.venv/
+data/
+*.png
+*.mp4
+*.db
+*.db-*
+*.joblib
+__pycache__/
+.DS_Store
